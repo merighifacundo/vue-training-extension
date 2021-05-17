@@ -16,7 +16,7 @@
               <curr :amt="item.qty * Number(item.product.price)"></curr>
             </b>
             <button
-              @click.stop="this.$parent.$emit('deleteItem', index)"
+              @click.stop="deleteItem(index)"
               class="btn btn-sm btn-danger ml-2"
             >
               -
@@ -40,6 +40,11 @@ export default {
   props: ['cart', 'displayCart'],
   components: {
     Curr
+  },
+  methods: {
+    deleteItem (id) {
+      this.$store.commit('deleteItem', id);
+    }
   },
   emits: ['deleteItem']
 }

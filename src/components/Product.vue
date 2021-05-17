@@ -1,7 +1,7 @@
 <template>
   <div class="col-2 m-auto">
     <button
-      @click="this.$parent.$parent.$parent.$parent.$emit('addItem', item)"
+      @click="addItem(item)"
       class="btn btn-success"
     >
       +
@@ -26,6 +26,11 @@ export default {
   emits: ['addItem'],
   components: {
     Curr
+  },
+  methods: {
+    addItem(product) {
+      this.$store.commit('addItem', product);
+    }
   }
 }
 </script>

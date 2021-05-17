@@ -32,17 +32,7 @@ export default {
         this.products = data
       })
   },
-  methods: {
-    addItem(product) {
-      console.log(this.$store)
-      this.$store.commit('addItem', product);
-      
-    },
-    deleteItem: function(id) {
-      this.$store.commit('deleteItem', id);
-      
-    }
-  },
+  
   computed: {
     cart() {
       return this.$store.state.cart;
