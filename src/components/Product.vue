@@ -1,9 +1,6 @@
 <template>
   <div class="col-2 m-auto">
-    <button
-      @click="addItem(item)"
-      class="btn btn-success"
-    >
+    <button @click="addItem(item)" class="btn btn-success">
       +
     </button>
   </div>
@@ -29,7 +26,7 @@ export default {
   },
   methods: {
     addItem(product) {
-      this.$store.commit('addItem', product);
+      this.$store.commit('addItem', product)
     }
   }
 }

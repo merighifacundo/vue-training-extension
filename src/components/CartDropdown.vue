@@ -42,8 +42,8 @@ export default {
     Curr
   },
   methods: {
-    deleteItem (id) {
-      this.$store.commit('deleteItem', id);
+    deleteItem(id) {
+      this.$store.commit('deleteItem', id)
     }
   },
   emits: ['deleteItem']

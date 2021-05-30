@@ -32,15 +32,16 @@ export default {
         this.products = data
       })
   },
-  
+
   computed: {
     cart() {
-      return this.$store.state.cart;
+      return this.$store.state.cart
     },
     cartTotal() {
       let sum = 0
       for (let key in this.$store.state.cart) {
-        sum = sum + this.$store.state.cart[key].product.price * this.cart[key].qty
+        sum =
+          sum + this.$store.state.cart[key].product.price * this.cart[key].qty
       }
       return sum
     },
